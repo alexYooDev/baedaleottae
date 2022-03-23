@@ -23,7 +23,7 @@
 
   - **기술 스택**
     - FE
-      * React(프레임워크), TypeScript(언어), Styled-components(스타일)
+      * React(프레임워크), TypeScript(언어), Recoil(상태관리), Styled-components(스타일)
     - BE
       * Flask, SQLAlchemy, MariaDB, Sentry, Gunicorn, Nginx
     - DA
