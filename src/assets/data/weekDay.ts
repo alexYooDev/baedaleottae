@@ -1,6 +1,6 @@
-interface DayObj {
+type DayObj = {
   [index: string]: string;
-}
+};
 
 /* mapped typing 필요 */
 const data = new Date();

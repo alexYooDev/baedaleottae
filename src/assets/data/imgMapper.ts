@@ -15,9 +15,9 @@ import korean_url from '../images/foodOptions/korean.jpeg';
 import western_url from '../images/foodOptions/western.jpeg';
 import alcohol_url from '../images/foodOptions/alcohol.jpeg';
 
-interface imageUrl {
+type imageUrl = {
   [index: string]: string;
-}
+};
 
 export const DELIVERY_IMAGES: imageUrl = {
   족발보쌈: pork_url,

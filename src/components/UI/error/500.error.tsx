@@ -1,8 +1,7 @@
 import React from 'react';
 import { ReactComponent as ERROR_IMG } from '../../../assets/images/takeout_boxes.svg';
-import { ErrorTitle, NoneExistsContainer } from './500.error.styles';
 import { HOME_IMG_CONFIG } from '../../../assets/data/homeImgConfig';
-import { ErrorSubtitle } from './404.error.styles';
+import styled from 'styled-components';
 
 const Error500: React.FC = () => {
   return (
@@ -17,5 +16,20 @@ const Error500: React.FC = () => {
     </NoneExistsContainer>
   );
 };
+
+const NoneExistsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ErrorSubtitle = styled.p`
+  font-size: 20px;
+`;
+
+const ErrorTitle = styled.h1`
+  font-size: 45px;
+`;
 
 export default Error500;
