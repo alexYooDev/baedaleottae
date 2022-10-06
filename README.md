@@ -49,25 +49,36 @@
     * Using the Prophet model, we could predict the estimated increase or decrease of COVID-19 cases and utilize the data for threat rate calculation (Prophet 모델을 통해 코로나의 증감 예측치를 계산하여 코로나 위험도 점수에 포함)
 ## 3. Project Functionality (프로젝트 기능 설명)
 
-**웹서비스의 유용성, 편의성 및 시각화의 실용성에 대한 설명**
+** Usability of the service (웹서비스의 유용성, 편의성 및 시각화의 실용성에 대한 설명)**
   
-  - 주요 기능 (주된 활용성) 및 서브 기능
+  - Main & Sub functionality (주요 기능 (주된 활용성) 및 서브 기능)
     
-    * 현재 사용자가 위치한 서울시 내부 자치구의 코로나 위험도 정도와 주변 음식점에 대한 정보를 한눈에 파악할 수 있도록 함
-    * 주변 음식점들의 리뷰 및 상세 정보를 평점순 등으로 필터링 하여 볼 수 있음
+    * Helps users to identify danger rates (Number of cases tested positive and restaurants or food delivery venue recommendation according to the rate<br/><br/>(현재 사용자가 위치한 서울시 내부 자치구의 코로나 위험도 정도와 주변 음식점에 대한 정보를 한눈에 파악할 수 있도록 함)
+    * Provides detailed information including food venues' reviews and popular items, and filtering & ordering available by recommendation rate.<br/><br/>(주변 음식점들의 리뷰 및 상세 정보를 평점순 등으로 필터링 하여 볼 수 있음)
 
-  - 프로젝트만의 차별점, 기대 효과
+  - What's special about this app? (프로젝트만의 차별점, 기대 효과)
     
-    * 배달 음식을 시키기 이전, 사용자는 해당 지역의 위험도 파악을 위해 다른 매체를 따로 접근하고 배달음식점을 선택할 필요 없이, 하나의 웹 서비스에서 두가지 행동을 간편히 할 수 있게 되었음
+    * It get rid of users' burden of identifying current danger of COVID-19 from other media and recommendable restaurants. We can handle all the heavy-lifting combined for them. <br/><br/>배달 음식을 시키기 이전, 사용자는 해당 지역의 위험도 파악을 위해 다른 매체를 따로 접근하고 배달음식점을 선택할 필요 없이, 하나의 웹 서비스에서 두가지 행동을 간편히 할 수 있게 되었음.
 
-## 4. 프로젝트 구성도
+## 4. Proeject Architecture (프로젝트 구성도)
 
-  - 와이어프레임/스토리보드 추가
+  - Wire-frame/Storyboard (와이어프레임/스토리보드)
 
     * Figma
       --> https://www.figma.com/file/QAyababpRtHmQzSR3tc4bb/%EB%B0%B0%EB%8B%AC-%EC%B6%94%EC%B2%9C-%EC%95%B1?node-id=0%3A1
 
-## 5. 프로젝트 팀원 역할 분담
+## 5. Team Responsibilities (프로젝트 팀원 역할 분담)
+
+| Name | Responsibility |
+| ------ | ------ |
+| Yoon, Sang | Team Leader/BE Developer |
+| Yoo, Hwanik | FE Developer |
+| Choi, Sungmin | BE Developer |
+| Kang, Hyunhee | Data analyst |
+| Kim, Suhyun | Data analyst |
+
+<br/>
+
 | 이름 | 담당 업무 |
 | ------ | ------ |
 | 윤상 | 팀장/백엔드 개발 |
@@ -77,6 +88,6 @@
 | 김수현 | 팀원/데이터 분석 |
 
 ## 6. FAQ
-  - 코로나 위험도의 계산방식은 어떻게 되나요?
-    * 최근 5일 간의 신규 코로나 확진자 (40점) + 3일 간의 코로나 증감 예측치 (30점) + 생활인구 점수 (10점) + 평균가구 점수 (15점) + 다중이용시설 분포 점수 (5점)
+  - How did we calculate COVID-19 Threat rate? (코로나 위험도의 계산방식은 어떻게 되나요?)
+    * We came up with our point system by their importance. Recent 5 days' new cases tested positive(40p) + recent 3 days' COVID-19 cases increase or decrease (40p) + resident population (10p) + Avg. number of household(15p) +  number of public facilities (5p), all of them combined makes up 100 points. We've researched for the relations of  each facets and caculated it into our COVID-19 threat rate.<br/>{최근 5일 간의 신규 코로나 확진자 (40점) + 3일 간의 코로나 증감 예측치 (30점) + 생활인구 점수 (10점) + 평균가구 점수 (15점) + 다중이용시설 분포 점수 (5점)}
     * 생활인구, 평균가구, 다중이용시설 비율과 코로나 증감률간의 상관관계를 구해 점수별 가중치를 계산 하였습니다.
